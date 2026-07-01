@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="theme-color" content="#09090B">
+
+    <meta name="description"
+        content="Discover, Track and Read Manga, Manhwa and Manhua from multiple sources.">
+
+    <meta name="keywords"
+        content="manga, manhwa, manhua, comics, novels, aethernovels">
+
+    <meta name="author"
+        content="AetherNovels">
+
+    <title>AetherNovels | Discover. Read. Escape.</title>
+
+    <link rel="icon" href="assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Background Effects -->
+
+    <div id="gradient-bg"></div>
+
+    <div id="aurora"></div>
+
+    <div id="particles"></div>
+
+    <div id="cursor-glow"></div>
+
+    <!-- Navigation -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <img src="assets/logo.png" alt="logo">
+
+                <span>AetherNovels</span>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#">Browse</a></li>
+
+                <li><a href="#">Latest</a></li>
+
+                <li><a href="#">Popular</a></li>
+
+                <li><a href="#">Genres</a></li>
+
+                <li><a href="#">Bookmarks</a></li>
+
+                <li><a href="#">History</a></li>
+
+            </ul>
+
+            <div class="nav-actions">
+
+                <button class="icon-btn">
+
+                    🔍
+
+                </button>
+
+                <button class="icon-btn">
+
+                    ❤
+
+                </button>
+
+                <button class="icon-btn">
+
+                    ☰
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <span class="hero-badge">
+
+                ✨ Welcome to AetherNovels
+
+            </span>
+
+            <h1>
+
+                Discover
+
+                <span>Manga</span>
+
+                <br>
+
+                Manhwa
+
+                <br>
+
+                & Manhua
+
+            </h1>
+
+            <p>
+
+                Explore thousands of series from multiple sources.
+
+                Discover hidden gems, bookmark your favorites,
+
+                and continue reading anywhere.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="btn-primary">
+
+                    Start Reading →
+
+                </button>
+
+                <button class="btn-secondary">
+
+                    Browse Library
+
+                </button>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="stat">
+
+                    <h2 id="statTitles">
+
+                        0
+
+                    </h2>
+
+                    <span>
+
+                        Titles
+
+                    </span>
+
+                </div>
+
+                <div class="stat">
+
+                    <h2 id="statReaders">
+
+                        0
+
+                    </h2>
+
+                    <span>
+
+                        Readers
+
+                    </span>
+
+                </div>
+
+                <div class="stat">
+
+                    <h2 id="statChapters">
+
+                        0
+
+                    </h2>
+
+                    <span>
+
+                        Chapters
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+
+            <div class="featured-card">
+
+                <div class="featured-cover">
+
+                    <img
+                        id="featuredImage"
+                        src=""
+                        alt="Featured Manga">
+
+                </div>
+
+                <div class="featured-info">
+
+                    <h2 id="featuredTitle">
+
+                        Loading...
+
+                    </h2>
+
+                    <p id="featuredGenres">
+
+                        Action • Fantasy
+
+                    </p>
+
+                    <button>
+
+                        Read Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SEARCH -->
+
+    <section class="search-section">
+
+        <div class="search-wrapper">
+
+            <input
+                type="text"
+                id="searchInput"
+                autocomplete="off"
+                placeholder="Search manga, manhwa, manhua...">
+
+            <button id="searchBtn">
+
+                Search
+
+            </button>
+
+        </div>
+
+        <div id="searchSuggestions">
+
+        </div>
+
+    </section>
+
+    <!-- Quick Categories -->
+
+    <section class="quick-categories">
+
+        <button>🔥 Trending</button>
+
+        <button>⚔ Action</button>
+
+        <button>💕 Romance</button>
+
+        <button>👻 Horror</button>
+
+        <button>🏫 School</button>
+
+        <button>😂 Comedy</button>
+
+        <button>🧙 Fantasy</button>
+
+        <button>🌌 Sci-Fi</button>
+
+        <button>🥋 Martial Arts</button>
+
+        <button>🗡 Murim</button>
+
+        <button>🎭 Drama</button>
+
+        <button>❤️ Slice of Life</button>
+
+    </section>
+
+    <!-- Scroll Indicator -->
+
+    <div class="scroll-indicator">
+
+        <span>
+
+            Scroll
+
+        </span>
+
+        <div class="mouse">
+
+            <div class="wheel"></div>
+
+        </div>
+
+    </div>
+
+    <!-- Main Content Starts Here -->
+
+    <main>
+
+        <!-- Trending Today -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>
+
+                    🔥 Trending Today
+
+                </h2>
+
+                <a href="#">
+
+                    View All →
+
+                </a>
+
+            </div>
+
+            <div
+                class="horizontal-slider"
+                id="trendingSlider">
+
+                <!-- Loaded from API -->
+
+            </div>
+
+        </section>
+                <!-- Featured Spotlight Carousel -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>⭐ Editor's Spotlight</h2>
+
+                <a href="#">Explore →</a>
+
+            </div>
+
+            <div id="spotlightCarousel" class="spotlight-carousel">
+
+                <!-- Loaded by API -->
+
+            </div>
+
+        </section>
+
+
+        <!-- Continue Reading -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>📖 Continue Reading</h2>
+
+                <a href="#">View Library →</a>
+
+            </div>
+
+            <div
+                id="continueReading"
+                class="horizontal-slider">
+
+            </div>
+
+        </section>
+
+
+        <!-- Popular This Week -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>🔥 Popular This Week</h2>
+
+                <a href="#">See More →</a>
+
+            </div>
+
+            <div
+                id="popularGrid"
+                class="card-grid">
+
+            </div>
+
+        </section>
+
+
+        <!-- Latest Updates -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>🆕 Latest Updates</h2>
+
+                <a href="#">More Updates →</a>
+
+            </div>
+
+            <div
+                id="latestUpdates"
+                class="card-grid">
+
+            </div>
+
+        </section>
+
+
+        <!-- Highest Rated -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>🏆 Highest Rated</h2>
+
+                <a href="#">Top Rankings →</a>
+
+            </div>
+
+            <div
+                id="topRated"
+                class="card-grid">
+
+            </div>
+
+        </section>
+
+
+        <!-- Recommended -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>❤️ Recommended For You</h2>
+
+                <a href="#">Refresh →</a>
+
+            </div>
+
+            <div
+                id="recommendedGrid"
+                class="card-grid">
+
+            </div>
+
+        </section>
+
+
+        <!-- Random Discoveries -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>🎲 Hidden Gems</h2>
+
+                <a href="#">Discover More →</a>
+
+            </div>
+
+            <div
+                id="hiddenGems"
+                class="card-grid">
+
+            </div>
+
+        </section>
+
+
+        <!-- Genres -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>📚 Browse Genres</h2>
+
+            </div>
+
+            <div class="genre-grid">
+
+                <button>Action</button>
+
+                <button>Adventure</button>
+
+                <button>Comedy</button>
+
+                <button>Drama</button>
+
+                <button>Fantasy</button>
+
+                <button>Horror</button>
+
+                <button>Isekai</button>
+
+                <button>Magic</button>
+
+                <button>Martial Arts</button>
+
+                <button>Murim</button>
+
+                <button>Mystery</button>
+
+                <button>Psychological</button>
+
+                <button>Reincarnation</button>
+
+                <button>Regression</button>
+
+                <button>Romance</button>
+
+                <button>School</button>
+
+                <button>Sci-Fi</button>
+
+                <button>Seinen</button>
+
+                <button>Shounen</button>
+
+                <button>Slice of Life</button>
+
+                <button>Sports</button>
+
+                <button>Supernatural</button>
+
+                <button>System</button>
+
+                <button>Thriller</button>
+
+                <button>Tragedy</button>
+
+                <button>Webtoon</button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Rankings -->
+
+        <section class="section rankings">
+
+            <div class="ranking-column">
+
+                <h2>🔥 Trending</h2>
+
+                <div id="rankingTrending"></div>
+
+            </div>
+
+            <div class="ranking-column">
+
+                <h2>⭐ Top Rated</h2>
+
+                <div id="rankingTop"></div>
+
+            </div>
+
+            <div class="ranking-column">
+
+                <h2>🆕 New</h2>
+
+                <div id="rankingNew"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- News Banner -->
+
+        <section class="announcement">
+
+            <div>
+
+                📢 Welcome to <strong>AetherNovels</strong> —
+                Discover your next favorite manga, manhwa, or manhua from multiple sources.
+
+            </div>
+
+        </section>
+
+
+        <!-- Newsletter -->
+
+        <section class="newsletter">
+
+            <h2>
+
+                Never Miss New Chapters
+
+            </h2>
+
+            <p>
+
+                Get notified whenever your favorite series updates.
+
+            </p>
+
+            <div class="newsletter-box">
+
+                <input
+                    type="email"
+                    placeholder="Enter your email">
+
+                <button>
+
+                    Subscribe
+
+                </button>
+
+            </div>
+
+        </section>
+                <!-- ========================= -->
+        <!-- Footer -->
+        <!-- ========================= -->
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <img src="assets/logo.png" alt="Logo">
+
+                <h2>AetherNovels</h2>
+
+                <p>
+
+                    Discover, track and read your favorite Manga,
+                    Manhwa and Manhua from multiple sources.
+
+                </p>
+
+                <div class="socials">
+
+                    <a href="#">Discord</a>
+
+                    <a href="#">GitHub</a>
+
+                    <a href="#">Twitter</a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Browse</h3>
+
+                <a href="#">Popular</a>
+                <a href="#">Latest</a>
+                <a href="#">Trending</a>
+                <a href="#">Genres</a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Library</h3>
+
+                <a href="#">Bookmarks</a>
+                <a href="#">History</a>
+                <a href="#">Continue Reading</a>
+                <a href="#">Recently Added</a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Genres</h3>
+
+                <a href="#">Action</a>
+                <a href="#">Romance</a>
+                <a href="#">Fantasy</a>
+                <a href="#">Murim</a>
+                <a href="#">Comedy</a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>About</h3>
+
+                <a href="#">About</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+
+                © 2026 AetherNovels
+
+            </span>
+
+            <span>
+
+                Powered by Manga Hook • SHIRO API • Mangamint
+
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ========================= -->
+    <!-- Mobile Navigation -->
+    <!-- ========================= -->
+
+    <aside id="mobileMenu">
+
+        <div class="mobile-header">
+
+            <h2>AetherNovels</h2>
+
+            <button id="closeMenu">
+
+                ✕
+
+            </button>
+
+        </div>
+
+        <nav>
+
+            <a href="#">🏠 Home</a>
+
+            <a href="#">🔥 Trending</a>
+
+            <a href="#">📚 Browse</a>
+
+            <a href="#">🆕 Latest</a>
+
+            <a href="#">⭐ Top Rated</a>
+
+            <a href="#">❤️ Bookmarks</a>
+
+            <a href="#">🕓 History</a>
+
+            <a href="#">⚙ Settings</a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ========================= -->
+    <!-- Search Modal -->
+    <!-- ========================= -->
+
+    <div id="searchModal">
+
+        <div class="search-modal-content">
+
+            <input
+                id="modalSearch"
+                type="text"
+                placeholder="Search Manga, Manhwa or Manhua...">
+
+            <div id="modalResults">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- Loading Screen -->
+    <!-- ========================= -->
+
+    <div id="loadingScreen">
+
+        <div class="loader">
+
+            <div class="loader-circle"></div>
+
+            <h2>
+
+                AetherNovels
+
+            </h2>
+
+            <span>
+
+                Loading your library...
+
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- Back To Top -->
+    <!-- ========================= -->
+
+    <button id="backToTop">
+
+        ↑
+
+    </button>
+
+
+    <!-- ========================= -->
+    <!-- Card Template -->
+    <!-- ========================= -->
+
+    <template id="mangaCardTemplate">
+
+        <div class="manga-card">
+
+            <div class="cover">
+
+                <img src="">
+
+            </div>
+
+            <div class="info">
+
+                <h3 class="title">
+
+                </h3>
+
+                <span class="genre">
+
+                </span>
+
+                <span class="chapter">
+
+                </span>
+
+                <div class="rating">
+
+                    ★★★★★
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </template>
+
+
+    <!-- ========================= -->
+    <!-- Continue Reading Template -->
+    <!-- ========================= -->
+
+    <template id="continueTemplate">
+
+        <div class="continue-card">
+
+            <img src="">
+
+            <div>
+
+                <h3></h3>
+
+                <span></span>
+
+                <progress
+                    value="0"
+                    max="100">
+
+                </progress>
+
+            </div>
+
+        </div>
+
+    </template>
+
+
+    <!-- ========================= -->
+    <!-- Skeleton Loader -->
+    <!-- ========================= -->
+
+    <template id="skeletonTemplate">
+
+        <div class="skeleton-card">
+
+            <div class="skeleton-cover"></div>
+
+            <div class="skeleton-title"></div>
+
+            <div class="skeleton-subtitle"></div>
+
+        </div>
+
+    </template>
+
+
+    <!-- ========================= -->
+    <!-- Notification -->
+    <!-- ========================= -->
+
+    <div id="toast">
+
+        Saved Successfully
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- JavaScript -->
+    <!-- ========================= -->
+
+    <script src="js/api.js"></script>
+
+    <script src="js/home.js"></script>
+
+    <script src="js/search.js"></script>
+
+    <script src="js/history.js"></script>
+
+    <script src="js/bookmarks.js"></script>
+
+    <script src="js/reader.js"></script>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
